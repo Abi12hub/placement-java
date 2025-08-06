@@ -1,0 +1,217 @@
+//rectangle pattern 6
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int r=sc.nextInt();
+        int c=sc.nextInt();
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//perfect square frame
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int r=sc.nextInt();
+        for(int i=0;i<r;i++){
+            for(int j=0;j<r;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//Staircase of Stars
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int r=sc.nextInt();
+        for(int i=0;i<r;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//Descending Star Steps
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int r=sc.nextInt();
+        for(int i=r-1;i>=0;i--){
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//Diagonal Stars
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++) {
+            for(int j=0; j<n; j++) {
+                if(j==i)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+            System.out.println();
+        }     
+    }
+}
+
+//Star Box Frame
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<n;j++) {
+                if(i==0||j==0||i==n-1||j==n-1)
+                    System.out.print("* ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//Star Pyramid 2
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for(int i = 0; i<n; i++) {
+            for(int j = 0; j <n-i-1; j++) {
+                System.out.print(" ");
+            }
+            for(int k=0;k<2*i+1;k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//Diamond Star Pattern 8
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<n-i-1;j++) {
+                System.out.print(" ");
+            }
+            for(int k=0;k<2*i+1;k++){
+                System.out.print("*");
+            }System.out.println();
+        }   
+        for(int i=n-2;i>=0;i--) {
+            for(int j=0; j<n-i-1;j++) {
+                System.out.print(" ");
+            }
+            for(int k=0;k<2*i+1;k++){
+             System.out.print("*");
+            } 
+            System.out.println();
+        }
+    }
+}
+
+//Number Pyramid 15
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            
+            int val=1;
+            int sp=n-i-1;
+            for(int j=0;j<sp;j++){
+                System.out.print(" "); 
+            }
+            
+            int star=2*i+1;
+            for(int k=0;k<star;k++){
+                if(k%2==0){
+                    System.out.print(val);
+                    val++;
+                }
+                else
+                    System.out.print(" ");
+            }
+                System.out.println(); 
+
+         }
+    }
+}
+
+//Symmetric Number Pyramid
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=0;i<n;i++){
+            
+            int val=1;
+            int sp=n-i-1;
+            for(int j=0;j<sp;j++){
+                System.out.print("  ");
+            }
+                
+            int star=2*i+1;
+            for(int k=0;k<star;k++){
+                 System.out.print(val+" ");
+                  if(k<star/2)
+                        val++;
+                  else
+                        val--;
+                }  
+                System.out.println(); 
+             
+         }
+    }
+}
