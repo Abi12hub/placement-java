@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static int square(int n){
+        int sqr = n*n;
+        return sqr;
+    }
+    
+    public static int sum(int sqr){
+        int sum = 0;
+        while(sqr!=0){
+            int r= sqr % 10;
+            sum +=r;
+            sqr/=10;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sqr = square(n);
+        int sum = sum(sqr);
+        if(n == sum)
+            System.out.println("true");
+        else
+            System.out.println("false");
+    }}
